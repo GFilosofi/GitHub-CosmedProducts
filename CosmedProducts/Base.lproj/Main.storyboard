@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cHz-dg-hst">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Product View Controller-->
+        <scene sceneID="50g-ER-29a">
+            <objects>
+                <viewController id="8Ws-dQ-p4i" customClass="ProductViewController" customModule="CosmedProducts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VkZ-p1-qcz"/>
+                        <viewControllerLayoutGuide type="bottom" id="eeI-bi-PR7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Un-ey-Swd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grey-fullscreen" translatesAutoresizingMaskIntoConstraints="NO" id="u1i-ku-Yap">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpG-1d-3tg">
+                                <rect key="frame" x="20" y="89" width="335" height="51"/>
+                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="34"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIb-fZ-S80">
+                                <rect key="frame" x="108" y="165" width="158" height="41"/>
+                                <state key="normal" title="Add To Cart" image="button-addtocart"/>
+                                <connections>
+                                    <action selector="addToCartPressed:" destination="8Ws-dQ-p4i" eventType="touchUpInside" id="918-1G-H5X"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2z1-3Q-6YK">
+                                <rect key="frame" x="0.0" y="214" width="375" height="380"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv8-Wl-Gfr">
+                                <rect key="frame" x="97" y="609" width="180" height="30"/>
+                                <state key="normal" title="Company And Contatcs"/>
+                                <connections>
+                                    <segue destination="jwL-NF-nBB" kind="push" id="xxE-re-dWq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eF2-8Z-7Mk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="productImageView" destination="2z1-3Q-6YK" id="veE-Ie-ZeZ"/>
+                        <outlet property="productNameLabel" destination="qpG-1d-3tg" id="mHa-1X-Ggr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzv-tY-ESq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1453.5" y="389.5"/>
+        </scene>
+        <!--Contact View Controller-->
+        <scene sceneID="NJh-Xa-hwb">
+            <objects>
+                <viewController id="jwL-NF-nBB" customClass="ContactViewController" customModule="CosmedProducts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CQa-cN-xaj"/>
+                        <viewControllerLayoutGuide type="bottom" id="IwX-Zi-NCX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JYB-Pf-4YK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v6Y-Gq-Fc1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="scrollView" destination="C1k-n3-ZNT" id="OQP-5W-DdD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wb1-Ob-cFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="C1k-n3-ZNT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ABOUT US" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cru-oX-ElW">
+                            <rect key="frame" x="8" y="150" width="359" height="43"/>
+                            <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="24"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CONTACT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bo-ut-fYL">
+                            <rect key="frame" x="8" y="593" width="359" height="43"/>
+                            <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="24"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fit-WU-Erg">
+                            <rect key="frame" x="56" y="201" width="279" height="156"/>
+                            <string key="text">COSMED is a European Company with headquarters based in Italy manufacturing Cardio Pulmonary and Metabolic Diagnostic Equipment. Innovative products and technological “firsts” in the market have characterized its history.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OI-sY-nb3">
+                            <rect key="frame" x="82" y="658" width="34" height="34"/>
+                            <state key="normal" title="Mail To" image="icon-about-email"/>
+                            <connections>
+                                <action selector="mailtoPressed:" destination="jwL-NF-nBB" eventType="touchUpInside" id="y5E-Oj-sKH"/>
+                                <action selector="phonePressed:" destination="jwL-NF-nBB" eventType="touchUpInside" id="ybK-Ga-uFQ"/>
+                                <action selector="websitePressed:" destination="jwL-NF-nBB" eventType="touchUpInside" id="p7R-iS-MGJ"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="info@cosmed.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeG-LQ-Fr7">
+                            <rect key="frame" x="135" y="664" width="157" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QF1-yW-lWe">
+                            <rect key="frame" x="82" y="706" width="34" height="34"/>
+                            <state key="normal" title="Phone Call" image="icon-about-phone"/>
+                            <connections>
+                                <action selector="phonePressed:" destination="jwL-NF-nBB" eventType="touchUpInside" id="RzP-tV-srX"/>
+                                <action selector="websitePressed:" destination="jwL-NF-nBB" eventType="touchUpInside" id="FwT-T6-6Mm"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+39 (06) 931-5492" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gn-oC-MnK">
+                            <rect key="frame" x="135" y="712" width="157" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nd3-AK-N4q">
+                            <rect key="frame" x="82" y="756" width="34" height="34"/>
+                            <state key="normal" title="Website" image="icon-about-website"/>
+                            <connections>
+                                <action selector="websitePressed:" destination="jwL-NF-nBB" eventType="touchUpInside" id="Kx6-Xb-lo3"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="www.cosmed.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIv-C4-7WQ">
+                            <rect key="frame" x="135" y="762" width="157" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_COSMED_Landscape_h32mm_FX_150dpi" translatesAutoresizingMaskIntoConstraints="NO" id="JpM-bv-QhX">
+                            <rect key="frame" x="47" y="32" width="281" height="88"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m9-ud-caC">
+                            <rect key="frame" x="56" y="370" width="279" height="181"/>
+                            <string key="text">Currently, COSMED products range from; complete line of spirometers (PC-based, desktop, hand-held and stationary), modular Pulmonary Function equipment, Cardio Pulmonary Exercise Testing systems (cart, mobile and desktop) to Gold Standard Body Composition for adults, paediatric and infants.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </scrollView>
+            </objects>
+            <point key="canvasLocation" x="1953.5" y="389.5"/>
+        </scene>
+        <!--Products Table View Controller-->
+        <scene sceneID="Z0O-cR-nQn">
+            <objects>
+                <tableViewController id="NOx-ga-35H" customClass="ProductsTableViewController" customModule="CosmedProducts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="122" sectionHeaderHeight="18" sectionFooterHeight="18" id="IDv-a7-wLW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="122" id="PRz-S9-gaD">
+                                <rect key="frame" x="0.0" y="114" width="375" height="122"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PRz-S9-gaD" id="SGR-ev-uPX">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="121"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="8Ws-dQ-p4i" kind="push" identifier="ShowProduct" id="QhM-yP-SE1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NOx-ga-35H" id="NDx-hF-Www"/>
+                            <outlet property="delegate" destination="NOx-ga-35H" id="P47-Zn-OOZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6yU-3g-ENi"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="peF-y9-717" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970.5" y="389.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WSD-f2-fWA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cHz-dg-hst" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wxz-hP-dmd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NOx-ga-35H" kind="relationship" relationship="rootViewController" id="qeE-oE-rd9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9i-Iy-WNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472" y="389"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button-addtocart" width="158" height="41"/>
+        <image name="grey-fullscreen" width="375" height="667"/>
+        <image name="icon-about-email" width="34" height="34"/>
+        <image name="icon-about-phone" width="34" height="34"/>
+        <image name="icon-about-website" width="34" height="34"/>
+        <image name="logo_COSMED_Landscape_h32mm_FX_150dpi" width="590" height="189"/>
+    </resources>
+</document>
